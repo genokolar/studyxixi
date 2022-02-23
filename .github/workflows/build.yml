@@ -27,8 +27,6 @@ jobs:
 
     - name: Build App
       run: npm run build:linux
-      env:
-          GH_TOKEN: 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
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
