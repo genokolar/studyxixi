@@ -1,6 +1,6 @@
 {
   "name": "sdudyxixi",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "jax.xie <v2018z@163.com>",
   "main": "./dist/main.js",
   "license": "MIT",
@@ -11,8 +11,9 @@
     "start": "chcp 65001 && npm run build && electron ./dist/main.js",
     "start:mac": "npm run build && electron ./dist/main.js",
     "build:mac": "npm run build && electron-builder",
-    "build:win": "npm run build && electron-builder --win",
-    "build:linux": "npm run build && electron-builder --linux"
+    "build:win": "npm run build && electron-builder --win --x64 --publish never",
+    "build:linux": "npm run build && electron-builder --linux --publish never",
+    "build:linux-arm": "npm run build && electron-builder --linux --arm64 --publish never"
   },
   "build": {
     "productName": "学习强国V2.1",
@@ -28,8 +29,7 @@
         {
           "target": "portable",
           "arch": [
-            "x64",
-            "ia32"
+            "x64"
           ]
         }
       ]
@@ -46,7 +46,7 @@
     "@types/lodash": "^4.14.151",
     "@types/node": "10.17.0",
     "@types/qs": "^6.9.2",
-    "electron": "8.2.5",
+    "electron": "8.5.5",
     "electron-builder": "22.6.1",
     "electron-updater": "4.3.1",
     "path": "^0.12.7",
