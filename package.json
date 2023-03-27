@@ -22,7 +22,8 @@
       "output": "build"
     },
     "mac": {
-      "target": ["dmg"]
+      "target": ["dmg"],
+      "icon": "./icon.png"
     },
     "win": {
       "target": [
@@ -32,12 +33,14 @@
             "x64"
           ]
         }
-      ]
+      ],
+      "icon": "./icon.png"
     },
     "linux": {
       "target": [
         "AppImage"
-      ]
+      ],
+      "icon": "./icon.png"
     }
   },
   "devDependencies": {
